@@ -5,8 +5,11 @@
 }
 .body{
     display: flex;
+    flex-direction: column;
     height: auto;
+    position: relative;
     max-width: 100vw;
+    min-width: 360px;
 }
 /* -------------------MAIN---------------- */
 .main{
@@ -19,7 +22,7 @@
 .conteneurOne{
     display: flex;
     flex-direction: column;
-    height: 85vh;
+    height: 90vh;
     width: 100%;
     background-image: url(./assets/imagesOne.jpg);
     background-size: cover;
@@ -46,8 +49,19 @@
 .conteneurTwo{
     display: flex;
     flex-direction: column;
-    height: 90vh;
-    background-color: rgb(225, 225, 225);
+    justify-content: center;
+    height: 50vh;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgb(221, 221, 221);
+}
+.contTwo-blockContOne{
+    display: flex;
+    height: auto;
+    min-height: 20%;
+    width: 100%;
+    margin-bottom: 10px;
 }
 .contTwo-blockOne{
     display: flex;
@@ -55,13 +69,14 @@
     justify-content: center;
     align-items: center;
     margin-left: 70px;
-    margin-top: 120px;
-    margin-bottom: 120px;
-    width: 30%;
-    height: 10%;
-    border-top: solid 2px rgb(73, 0, 0);
-    border-left: solid 2px rgb(73, 0, 0);
-    background-color: rgb(213, 213, 213);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 5px;
+    width: 50%;
+    height: 50%;
+    border-radius: 12px;
+    box-shadow: 6px 8px 8px rgb(153, 153, 153);
+    background-color: rgb(208, 208, 208);
 }
 .contTwo-titleOne{
     display: flex;
@@ -70,6 +85,13 @@
     text-align: center;
     font-size: 16px;
 }
+.contTwo-blockContTwo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+}
 .contTwo-blockTwo{
     display: flex;
     flex-direction: column;
@@ -77,26 +99,27 @@
     align-items: center;
     min-height: 40vh;
     height: auto;
-    width: 80%;
-    margin-left: 70px;
-    margin-right: 70px;
-    border-top: solid 2px rgb(73, 0, 0);
-    border-left: solid 2px rgb(73, 0, 0);
-    background-color: rgb(187, 187, 187);
+    width: 100%;
 }
 .contTwo-text{
     display: flex;
     height: auto;
+    max-height: 50%;
     width: auto;
+    max-width: 70%;
     text-align: center;
     font-size: 16px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 6px 8px 8px rgb(143, 143, 143);
+    background-color: rgb(206, 206, 206);
 }
 /* --------------------CONTENEUR TREE ------------------ */
 .conteneurTree{
     display: flex;
     flex-direction: column;
     height: auto;
-    min-height: 100vh;
+    min-height: 85vh;
     width: 100%;
     max-width: 100vw;
     background-color: rgb(186, 186, 186);
@@ -114,20 +137,23 @@
     justify-content: center;
     align-items: center;
     margin-top: 75px;
-    height: 40%;
-    width: 50%;
+    padding: 10px;
+    height: 50%;
+    width: 70%;
+    border-radius: 10px;
     background-color: rgb(225, 225, 225);
+    box-shadow: 6px 8px 8px rgb(155, 155, 155);
 }
 .contTree-blockGrid{
     display: grid;
     grid-template-rows: 50% 50%;
     grid-template-columns: 50% 50%;
-    height: 100%;
-    width: auto;
-    margin-left: 20px;
-    margin-top: 120px;
-    margin-bottom: 120px;
-    margin-right: 20px;
+    height: 500px;
+    width: 100%;
+    margin-left: 5px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    margin-right: 5px;
 }
 .contTree-blockGridOne{
     display: flex;
@@ -140,8 +166,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60%;
-    width: 70%;
+    height: 80%;
+    width: 90%;
     background-color: rgb(172, 172, 172);
 }
 .contTree-blockGridTwo{
@@ -155,8 +181,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60%;
-    width: 70%;
+    height: 80%;
+    width: 90%;
     background-color: rgb(172, 172, 172);
 }
 .contTree-blockGridTree{
@@ -170,8 +196,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60%;
-    width: 70%;
+    height: 80%;
+    width: 90%;
     background-color: rgb(172, 172, 172);
 }
 .contTree-blockGridFoor{
@@ -185,7 +211,91 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60%;
-    width: 70%;
+    height: 80%;
+    width: 90%;
     background-color: rgb(172, 172, 172);
+}
+/* ----------------------CONTENEUR FOOR ------------------- */
+.conteneurFoor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(232, 232, 232);
+}
+.contFoor-blockOne{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+}
+.contFoor-blockTitleOne{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 70%;
+    border-radius: 8px;
+    box-shadow: 6px 8px 8px rgb(158, 158, 158);
+    background-color: rgb(228, 228, 228);
+}
+.contFoor-titleOne{
+    font-size: 32px;
+}
+.contFoor-conteneur{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 30px;
+}
+.contFoor-blockTwo{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 90%;
+    width: 40%;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: rgb(208, 208, 208);
+}
+.contFoor-blockOneGridOne{
+    display: flex;
+    align-items: center;
+    text-align: start;
+    height: 100%;
+    width: 100%;
+}
+.contFoor-blockOneGridTwo{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: blue;
+}
+.contFoor-blockTree{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column-reverse;
+    height: 90%;
+    width: 40%;
+    margin-right: 20px;
+    background-color: rgb(196, 196, 196);
+}
+.contFoor-blockTwoGridOne{
+    display: flex;
+    align-items: center;
+    text-align: start;
+    height: 100%;
+    width: 100%;
+}
+.contFoor-blockTwoGridTwo{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: blue;
 }
