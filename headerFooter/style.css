@@ -2,44 +2,51 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 :root {
-	--mainColor: #F1F1F1;
+	--mainColor: #f1f1f1;
 	--secondaryColor: #d8d8d8;
-	--accentColor: #BB002D;
+	--accentColor: #bb002d;
 	--secondaryAccentColor: ;
 	--mainFontColor: #130004;
 	--secondaryFontColor: ;
-  --shadowColor: rgba(0, 0, 0, 0.25);
+	--shadowColor: rgba(0, 0, 0, 0.25);
 
-  --darkMainColor: #202020;
+	--darkMainColor: #202020;
 	--darkSecondaryColor: #464646;
 	--darkMainFontColor: #dbdbdb;
 }
 
 .body {
 	min-width: 360px;
-	width: 100vw;
-  max-width: 100vw;
-	height: 100vh;
-	background-color: grey;
+	max-width: 100vw;
+	height: 200vh;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	position: relative;
 }
 
 /* CSS FOR HEADER AND FOOTER DO NOT TOUCH */
 
 .header {
+  position: fixed;
+  top: 0;
 	width: 100%;
-	height: 60px;
-	background-color: var(--mainColor);
+	height: 55px;
 	display: flex;
+	box-shadow: 0 4px 12px var(--shadowColor);
+  transition: top 200ms;
+}
+
+.headerAbove {
+  width: 100%;
+	height: 100%;
+	display: flex;
+  background-color: var(--mainColor);
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-  box-shadow: 0 4px 12px var(--shadowColor);
   z-index: 10;
 }
 
@@ -67,28 +74,27 @@
 .themeButton {
 	width: 30px;
 	height: 15px;
-  border: solid 1px var(--darkMainColor);
-  border-radius: 15px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+	border: solid 1px var(--darkMainColor);
+	border-radius: 15px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 .themeButton:hover {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .sliderSwitch {
-  justify-content: flex-end;
+	justify-content: flex-end;
 }
 
 .themeButtonSlider {
-  width: 15px;
-  height: 15px;
-  background-color: black;
-  border-radius: 15px;
+	width: 15px;
+	height: 15px;
+	background-color: black;
+	border-radius: 15px;
 }
-
 
 .headerRightRight {
 	width: auto;
@@ -97,8 +103,8 @@
 }
 
 .navButton {
-	width: 60px;
-	height: 60px;
+	width: 55px;
+	height: 55px;
 	border: none;
 	background: none;
 	display: flex;
@@ -122,6 +128,23 @@
 	background-color: var(--darkSecondaryColor);
 	margin-top: 3px;
 	margin-bottom: 3px;
+  position: relative;
+}
+
+.cross {
+  transform: rotate(45deg);
+  margin: 0;
+  position: absolute;
+}
+
+.crossInverted {
+  transform: rotate(-45deg);
+  margin: 0;
+  position: absolute;
+}
+
+.hide {
+  display: none;
 }
 
 .homeLink {
@@ -132,83 +155,130 @@
 }
 
 .navMenu {
-  position: absolute;
-  top: -180px;
-  left: 0;
-  width: 100%;
-  height: auto;
-  background-color: var(--secondaryColor);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: 200ms;
-  z-index: 8;
+	position: absolute;
+	top: -165px;
+	left: 0;
+	width: 100%;
+	height: auto;
+	background-color: var(--secondaryColor);
+	color: var(--mainFontColor);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	transition: 200ms;
 }
 
 .deployMenu {
-  top: 60px;
+	top: 55px;
 }
 
 .navList {
-  padding: 0;
-  list-style: none;
-  width: 100%;
-  height: 100%;
+	padding: 0;
+	list-style: none;
+	color: inherit;
+	width: 100%;
+	height: 100%;
 }
 
 .navLink {
-  width: 100%;
-  height: 60px;
-  border-top: solid 1px var(--accentColor);
+	width: 100%;
+	height: 55px;
+	color: inherit;
+	border-top: solid 1px var(--accentColor);
+	transition: 50ms;
 }
 
 .navLink:first-child {
-  border-top: none;
+	border-top: none;
+}
+
+.navLink:active {
+	background-color: var(--mainColor);
 }
 
 .navLink a {
-  height: 100%;
-  width: 100%;
-  padding: 8px;
-  color: var(--mainFontColor);
-  text-decoration: none;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+	height: 100%;
+	width: 100%;
+	padding: 8px;
+	color: inherit;
+	text-decoration: none;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 .navLink a img {
-  margin-right: 18px;
+	margin-right: 18px;
 }
 
-
-
-
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 56px;
-  background-color: var(--secondaryColor);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 80px;
+	background-color: var(--secondaryColor);
+	display: flex;
+	flex-direction: column;
+  justify-content: flex-end;
+	box-shadow: 0 -4px 12px var(--shadowColor);
+}
+
+.upperFooter {
+	width: 100%;
+	min-height: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.lowerFooter {
+	width: 100%;
+	height: 35%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.networks {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.networkList {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 -4px 12px var(--shadowColor);
+  margin: 0 8px 0 8px;
+  transition: 100ms;
 }
 
+.networkList:hover, .networkList:active {
+  transform: scale(1.08);
+}
+
+.networkList a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyrights {
+  font-size: 14px;
+}
 
 /* DARK THEME */
 
 .dark {
-  background-color: var(--darkMainColor);
-  color: var(--darkMainFontColor);
+	background-color: var(--darkMainColor);
+	color: var(--darkMainFontColor);
 }
 
 .darkThemeButton {
-  background-color: #3a3a3a;
+	background-color: #3a3a3a;
 }
 
 .darkNavMenu {
-  background-color: var(--darkSecondaryColor);
-  color: var(--darkMainFontColor);
+	background-color: var(--darkSecondaryColor);
+	color: var(--darkMainFontColor);
 }
