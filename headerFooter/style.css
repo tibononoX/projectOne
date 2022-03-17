@@ -2,7 +2,12 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  max-width: 100vw;
 }
 
 :root {
@@ -28,26 +33,33 @@
 }
 
 /* CSS FOR HEADER AND FOOTER DO NOT TOUCH */
+/* MOBILE */
+.mobile {
+	min-width: 360px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
 
 .header {
-  position: fixed;
-  top: 0;
+	position: fixed;
+	top: 0;
+	min-width: 360px;
 	width: 100%;
 	height: 55px;
-	display: flex;
 	box-shadow: 0 4px 12px var(--shadowColor);
-  transition: top 200ms;
+	transition: top 200ms;
 }
 
 .headerAbove {
-  width: 100%;
+	width: 100%;
 	height: 100%;
 	display: flex;
-  background-color: var(--mainColor);
+	background-color: var(--mainColor);
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-  z-index: 10;
+	z-index: 10;
 }
 
 .headerLeft {
@@ -75,8 +87,8 @@
 	width: 30px;
 	height: 15px;
 	border-radius: 15px;
-  background-color: rgb(204, 204, 204);
-  border: none;
+	background-color: rgb(204, 204, 204);
+	border: none;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
@@ -129,23 +141,23 @@
 	background-color: var(--darkSecondaryColor);
 	margin-top: 3px;
 	margin-bottom: 3px;
-  position: relative;
+	position: relative;
 }
 
 .cross {
-  transform: rotate(45deg);
-  margin: 0;
-  position: absolute;
+	transform: rotate(45deg);
+	margin: 0;
+	position: absolute;
 }
 
 .crossInverted {
-  transform: rotate(-45deg);
-  margin: 0;
-  position: absolute;
+	transform: rotate(-45deg);
+	margin: 0;
+	position: absolute;
 }
 
 .hide {
-  display: none;
+	display: none;
 }
 
 .homeLink {
@@ -211,7 +223,70 @@
 .navLink a img {
 	margin-right: 18px;
 }
+/* MOBILE END */
 
+/* DESKTOP */
+.desktop {
+	width: 100%;
+	height: 100%;
+	background-color: var(--mainColor);
+	display: none;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.desktop .headerLeft {
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.desktop .headerMid {
+	height: 100%;
+}
+
+.desktop .headerRight {
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.desktop .menu {
+	width: 100%;
+	height: 50%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	list-style: none;
+}
+
+.desktop .menu .menuList {
+	width: 50%;
+	height: 100%;
+	transition: 400ms;
+}
+
+.menuList a {
+	width: 100%;
+	height: 100%;
+  font-size: 22px;
+  text-decoration: none;
+  color: var(--mainFontColor);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 200ms;
+	box-sizing: content-box;
+}
+
+.menuList a:hover {
+	background-color: var(--secondaryColor);
+	border-bottom: solid 1px var(--accentColor);
+}
+
+/* DESKTOP END */
+
+/* FOOTER */
 .footer {
 	position: absolute;
 	bottom: 0;
@@ -220,7 +295,7 @@
 	background-color: var(--secondaryColor);
 	display: flex;
 	flex-direction: column;
-  justify-content: flex-end;
+	justify-content: flex-end;
 	box-shadow: 0 -4px 12px var(--shadowColor);
 }
 
@@ -241,31 +316,32 @@
 }
 
 .networks {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
+	display: flex;
+	flex-direction: row;
+	list-style: none;
 }
 
 .networkList {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 8px 0 8px;
-  transition: 100ms;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 8px 0 8px;
+	transition: 100ms;
 }
 
-.networkList:hover, .networkList:active {
-  transform: scale(1.08);
+.networkList:hover,
+.networkList:active {
+	transform: scale(1.08);
 }
 
 .networkList a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .copyrights {
-  font-size: 14px;
+	font-size: 14px;
 }
 
 /* DARK THEME */
@@ -282,4 +358,20 @@
 .darkNavMenu {
 	background-color: var(--darkSecondaryColor);
 	color: var(--darkMainFontColor);
+}
+
+@media screen and (min-width: 900px) {
+	.mobile {
+		display: none;
+	}
+
+	.desktop {
+		display: flex;
+	}
+
+	.header {
+		height: 100px;
+		position: inherit;
+		top: auto;
+	}
 }

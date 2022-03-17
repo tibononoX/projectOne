@@ -6,7 +6,9 @@ const headerAbove = document.getElementById("headerAbove");
 const footer = document.getElementById("footer");
 const logoBarOne = document.getElementById("logoBarOne");
 const logoBarTwo = document.getElementById("logoBarTwo");
-const logoBarThree = document.getElementById("logoBarThree");
+const logoBarThree = document.getElementById("logoBarThree")
+
+let innerWidth = window.innerWidth;
 
 // DARK THEME
 themeButton.addEventListener("click", (event) => {
@@ -15,6 +17,24 @@ themeButton.addEventListener("click", (event) => {
 	headerAbove.classList.toggle("dark");
 	navMenu.classList.toggle("darkNavMenu");
 	footer.classList.toggle("dark");
+});
+
+// MAKES HEADER SCROLL WHEN ON MOBILE
+window.addEventListener('resize', function(event){
+  innerWidth = this.window.innerWidth;
+  if (innerWidth < 900) {
+    let lastScrollTop = 0;
+    document.addEventListener("scroll", function(){
+       let st = window.pageYOffset || document.documentElement.scrollTop;
+       if (st > lastScrollTop && innerWidth < 900){
+        header.style.top = "-65px";
+        menuInteract(true);
+       } else {
+        header.style.top = "0px";
+       }
+       lastScrollTop = st <= 0 ? 0 : st;
+    }, false);
+  }
 });
 
 // MENU BUTTON LOGIC
@@ -54,30 +74,3 @@ function menuInteract(fromScroll) {
 		isMenuOpen = false;
 	}
 }
-
-// HIDES HEADER ON SCROLL
-// document.addEventListener("wheel", (event) => {
-//   console.log(event);
-// 	menuScroll(event);
-// });
-// function menuScroll() {
-// 	if (event.deltaY < 0) {
-// 		header.style.top = "0px";
-// 	}
-// 	if (event.deltaY > 0) {
-// 		header.style.top = "-65px";
-// 		menuInteract(true);
-// 	}
-// }
-
-let lastScrollTop = 0;
-document.addEventListener("scroll", function(){
-   let st = window.pageYOffset || document.documentElement.scrollTop;
-   if (st > lastScrollTop){
-    header.style.top = "-65px";
-		menuInteract(true);
-   } else {
-		header.style.top = "0px";
-   }
-   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-}, false);
