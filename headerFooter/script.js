@@ -56,15 +56,28 @@ function menuInteract(fromScroll) {
 }
 
 // HIDES HEADER ON SCROLL
-document.addEventListener("wheel", (event) => {
-	menuScroll(event);
-});
-function menuScroll() {
-	if (event.deltaY < 0) {
-		header.style.top = "0px";
-	}
-	if (event.deltaY > 0) {
-		header.style.top = "-65px";
+// document.addEventListener("wheel", (event) => {
+//   console.log(event);
+// 	menuScroll(event);
+// });
+// function menuScroll() {
+// 	if (event.deltaY < 0) {
+// 		header.style.top = "0px";
+// 	}
+// 	if (event.deltaY > 0) {
+// 		header.style.top = "-65px";
+// 		menuInteract(true);
+// 	}
+// }
+
+let lastScrollTop = 0;
+document.addEventListener("scroll", function(){
+   let st = window.pageYOffset || document.documentElement.scrollTop;
+   if (st > lastScrollTop){
+    header.style.top = "-65px";
 		menuInteract(true);
-	}
-}
+   } else {
+		header.style.top = "0px";
+   }
+   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+}, false);
