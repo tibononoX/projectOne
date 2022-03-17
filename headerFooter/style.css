@@ -74,8 +74,9 @@
 .themeButton {
 	width: 30px;
 	height: 15px;
-	border: solid 1px var(--darkMainColor);
 	border-radius: 15px;
+  background-color: rgb(204, 204, 204);
+  border: none;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
