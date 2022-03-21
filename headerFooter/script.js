@@ -36,12 +36,26 @@ function switchDarkTheme() {
 }
 
 themeButton.addEventListener("click", (event) => {
+	if (navMenu.classList.contains("darkNavMenu")) {
+		localStorage.setItem("darkMode", "enabled");
+	} else {
+		localStorage.setItem("darkMode", "disabled");
+	}
 	switchDarkTheme();
 });
 
 themeButtonDesktop.addEventListener("click", (event) => {
+	if (!navMenu.classList.contains("darkNavMenu")) {
+		localStorage.setItem("darkMode", "enabled");
+	} else {
+		localStorage.setItem("darkMode", "disabled");
+	}
 	switchDarkTheme();
 });
+
+if (localStorage.getItem("darkMode") == "enabled") {
+	switchDarkTheme();
+}
 
 // MAKES HEADER SCROLL WHEN ON MOBILE
 window.addEventListener("resize", function (event) {

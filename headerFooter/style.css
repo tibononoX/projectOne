@@ -272,6 +272,7 @@ html {
 }
 
 .menuList a {
+  padding: 12px;
 	width: 100%;
 	height: 100%;
 	font-size: 22px;
@@ -280,15 +281,15 @@ html {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: 100ms;
-	box-sizing: content-box;
+	transition: 200ms;
+	box-sizing: border-box;
 }
 
 .menuList a:hover {
 	background-color: var(--secondaryColor);
-	border-bottom: solid 1px var(--accentColor);
+	border-bottom: solid 8px var(--accentColor);
+  transition: 200ms;
 }
-
 /* DESKTOP END */
 
 /* FOOTER */
@@ -340,17 +341,23 @@ html {
 	align-items: center;
 	margin: 0 8px 0 8px;
 	transition: 100ms;
+  filter: brightness(95%);
 }
 
 .networkList:hover,
 .networkList:active {
-	transform: scale(1.08);
+  image-rendering: optimizeQuality;
+	filter: brightness(105%);
 }
 
 .networkList a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.networkList img {
+  max-width: 48px;
 }
 
 .copyrights {
