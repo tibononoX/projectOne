@@ -36,7 +36,7 @@ function switchDarkTheme() {
 }
 
 themeButton.addEventListener("click", (event) => {
-	if (navMenu.classList.contains("darkNavMenu")) {
+	if (!navMenu.classList.contains("darkNavMenu")) {
 		localStorage.setItem("darkMode", "enabled");
 	} else {
 		localStorage.setItem("darkMode", "disabled");
