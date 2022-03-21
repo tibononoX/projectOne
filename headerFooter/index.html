@@ -6,6 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tokyo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;500&family=Montserrat:ital,wght@0,300;0,600;1,300&family=Oswald:wght@300&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -22,25 +27,25 @@
           <li class="navLink">
             <a href="">
               <img src="https://via.placeholder.com/48x48.png" alt="">
-              TEST
+              HOME
             </a>
           </li>
           <li class="navLink">
             <a href="">
               <img src="https://via.placeholder.com/48x48.png" alt="">
-              TEST
+              ACTIVITIES
             </a>
           </li>
           <li class="navLink">
             <a href="">
               <img src="https://via.placeholder.com/48x48.png" alt="">
-              TEST
+              SERVICES
             </a>
           </li>
           <li class="navLink">
             <a href="">
               <img src="https://via.placeholder.com/48x48.png" alt="">
-              TEST
+              CONTACT
             </a>
           </li>
         </ul>
@@ -72,14 +77,14 @@
     <div class="desktop" id="headerDesktop">
       <div class="headerLeft">
         <ul class="menu">
-          <li class="menuList">
+          <li class="menuList" id="dekstopNavButtonOne">
             <a href="">
-              TEST
+              HOME
             </a>
           </li>
-          <li class="menuList">
+          <li class="menuList" id="dekstopNavButtonTwo">
             <a href="">
-              TEST
+              ACTIVITIES
             </a>
           </li>
         </ul>
@@ -93,19 +98,22 @@
 
       <div class="headerRight">
         <ul class="menu">
-          <li class="menuList">
+          <li class="menuList" id="dekstopNavButtonThree">
             <a href="">
-              TEST
+              SERVICES
             </a>
           </li>
-          <li class="menuList">
+          <li class="menuList" id="dekstopNavButtonFour">
             <a href="">
-              TEST
+              CONTACT
             </a>
           </li>
         </ul>
       </div>
     </div>
+    <button class="themeButton" id="themeButtonDesktop">
+      <div class="themeButtonSlider"></div>
+    </button>
   </header>
 
   <main class="main">
@@ -148,7 +156,7 @@
       </ul>
     </div>
     <div class="rightFooter">
-      <ul class="footerList">
+      <ul class="footerList" id="footerPageLinks">
         <li class="footerLinks">
           <a href="" class="footerLinks">
             Homepage

@@ -6,7 +6,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 :root {
@@ -29,12 +29,15 @@ html {
 	height: 100vh;
 	display: flex;
 	position: relative;
+	font-family: "Oswald", sans-serif;
+	font-family: "Hind Siliguri", sans-serif;
+	font-family: "Montserrat", sans-serif;
 }
 
 /* CSS FOR HEADER AND FOOTER DO NOT TOUCH */
 /* MOBILE */
 .mobile {
-	min-width: 360px;
+	min-width: 380px;
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -76,10 +79,13 @@ html {
 
 .headerRightLeft {
 	width: 60px;
-	height: 60px;
 	display: inherit;
 	justify-content: center;
 	align-items: center;
+}
+
+#themeButtonDesktop {
+  display: none;
 }
 
 .themeButton {
@@ -252,7 +258,7 @@ html {
 
 .desktop .menu {
 	width: 100%;
-	height: 50%;
+	height: 100%;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
@@ -268,13 +274,13 @@ html {
 .menuList a {
 	width: 100%;
 	height: 100%;
-  font-size: 22px;
-  text-decoration: none;
-  color: var(--mainFontColor);
+	font-size: 22px;
+	text-decoration: none;
+	color: var(--mainFontColor);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: 200ms;
+	transition: 100ms;
 	box-sizing: content-box;
 }
 
@@ -298,9 +304,10 @@ html {
 	box-shadow: 0 -4px 12px var(--shadowColor);
 }
 
-.rightFooter, .leftFooter {
-  display: none;
-} 
+.rightFooter,
+.leftFooter {
+	display: none;
+}
 
 .upperFooter {
 	width: 100%;
@@ -311,23 +318,23 @@ html {
 }
 
 .midFooter {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
 }
 
 .networks {
 	display: flex;
 	flex-direction: row;
-  justify-content: center;
-  align-items: center;
+	justify-content: center;
+	align-items: center;
 	list-style: none;
 }
 
 .networkList {
-  width: 50%;
-  height: 50%;
+	width: 50%;
+	height: 50%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -336,7 +343,7 @@ html {
 }
 
 .networkList:hover,
-.networkList:active{
+.networkList:active {
 	transform: scale(1.08);
 }
 
@@ -348,22 +355,7 @@ html {
 
 .copyrights {
 	font-size: 14px;
-}
-
-/* DARK THEME */
-
-.dark {
-	background-color: var(--darkMainColor);
-	color: var(--darkMainFontColor);
-}
-
-.darkThemeButton {
-	background-color: #3a3a3a;
-}
-
-.darkNavMenu {
-	background-color: var(--darkSecondaryColor);
-	color: var(--darkMainFontColor);
+	color: #888888;
 }
 
 /* DESKTOP LAYOUT */
@@ -378,83 +370,126 @@ html {
 	}
 
 	.header {
-		height: 100px;
+		height: 80px;
 		position: inherit;
 		top: auto;
 	}
 
-  .footer {
-    height: 148px;
-    padding: 16px;
-    flex-direction: row;
+#themeButtonDesktop {
+  display: flex;
+}
+
+  .themeButton {
+    position: absolute;
+    top: 8px;
+    right: 8px;
   }
 
-  .rightFooter {
-    padding-left: 10%;
-    width: 35%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-  }
+	.footer {
+		height: 148px;
+		padding: 16px;
+		flex-direction: row;
+	}
 
-  .midFooter {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+	.rightFooter {
+		padding-left: 10%;
+		width: 35%;
+		height: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+	}
 
-  .leftFooter .homeLink {
-    height: 80px;
-    justify-content: center;
-    align-items: center;
-  }
+	.midFooter {
+		width: 30%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 
-  .footerLogo {
-    transform: scale(0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+	.leftFooter .homeLink {
+		height: 80px;
+		justify-content: center;
+		align-items: center;
+	}
 
-  .leftFooter {
-    display: flex;
-    flex-direction: column;
-    width: 35%;
-    height: 100%;
-  }
+	.footerLogo {
+		transform: scale(0.3);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
-  .footerList {
-    width: 80%;
-    height: 60%;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    list-style: none;
-  }
+	.leftFooter {
+		display: flex;
+		flex-direction: column;
+		width: 35%;
+		height: 100%;
+	}
 
-  .footerLinks {
-    height: 22px;
-    color: var(--mainFontColor);
-    text-decoration: none;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
+	.footerList {
+		width: 80%;
+		height: 60%;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		list-style: none;
+	}
 
-  .footerLinks:hover {
-    color: var(--darkSecondaryColor);
-  }
+	.footerLinks {
+		height: 22px;
+		color: var(--mainFontColor);
+		text-decoration: none;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
 
-  .upperFooter {
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    flex-direction: column;
-  }
+	.footerLinks:hover {
+		color: var(--darkSecondaryColor);
+	}
+
+	.upperFooter {
+		width: 100%;
+		height: 100%;
+		justify-content: center;
+		flex-direction: column;
+	}
+}
+
+/* DARK THEME */
+
+.dark {
+	background-color: var(--darkMainColor);
+	color: var(--darkMainFontColor);
+}
+
+.dark .footerLinks {
+  color: var(--darkMainFontColor);
+}
+
+.dark .footerLinks:hover {
+  color: var(--mainColor);
+}
+
+.darkThemeButton {
+	background-color: #3a3a3a;
+}
+
+.darkNavMenu {
+	background-color: var(--darkSecondaryColor);
+	color: var(--darkMainFontColor);
+}
+
+.desktopNavDark a {
+  background-color: var(--darkMainColor);
+  color: var(--darkMainFontColor);
+}
+
+.desktopNavDark a:hover {
+  background-color: var(--darkSecondaryColor);
 }
