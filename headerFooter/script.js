@@ -3,6 +3,7 @@ const navMenu = document.getElementById("navMenu");
 const themeButton = document.getElementById("themeButton");
 const header = document.getElementById("header");
 const headerAbove = document.getElementById("headerAbove");
+const headerDesktop = document.getElementById("headerDesktop")
 const footer = document.getElementById("footer");
 const logoBarOne = document.getElementById("logoBarOne");
 const logoBarTwo = document.getElementById("logoBarTwo");
@@ -15,6 +16,7 @@ themeButton.addEventListener("click", (event) => {
 	themeButton.classList.toggle("sliderSwitch");
 	themeButton.classList.toggle("darkThemeButton");
 	headerAbove.classList.toggle("dark");
+  headerDesktop.classList.toggle("dark");
 	navMenu.classList.toggle("darkNavMenu");
 	footer.classList.toggle("dark");
 });
