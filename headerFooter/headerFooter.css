@@ -298,7 +298,6 @@ html {
 
 /* FOOTER */
 .footer {
-  margin-top: 18px;
 	bottom: 0;
 	width: 100%;
 	height: 70px;
@@ -502,5 +501,17 @@ html {
 }
 
 .desktopNavDark a:hover {
+  background-color: var(--darkSecondaryColor);
+}
+
+.dark .cardTitle, .dark .cardRow {
+  background-color: var(--darkSecondaryColor);
+}
+
+.dark .cardRow:active {
+  filter: brightness(120%);
+}
+
+.cardRowDark {
   background-color: var(--darkSecondaryColor);
 }
