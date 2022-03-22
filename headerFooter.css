@@ -503,15 +503,3 @@ html {
 .desktopNavDark a:hover {
   background-color: var(--darkSecondaryColor);
 }
-
-.dark .cardTitle, .dark .cardRow {
-  background-color: var(--darkSecondaryColor);
-}
-
-.dark .cardRow:active {
-  filter: brightness(120%);
-}
-
-.cardRowDark {
-  background-color: var(--darkSecondaryColor);
-}
