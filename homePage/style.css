@@ -9,6 +9,7 @@
     height: auto;
     position: relative;
     max-width: 100vw;
+    width: 100vw;
     min-width: 360px;
 }
 /* -------------------MAIN---------------- */
@@ -16,7 +17,7 @@
     display: flex;
     flex-direction: column;
     height: auto;
-    width: 100%;
+    width: 100vw;
 }
 /* -----------------CONTENEUR ONE ------------ */
 .conteneurOne{
@@ -71,7 +72,7 @@
     margin-left: 70px;
     margin-top: 10px;
     margin-bottom: 20px;
-    padding: 5px;
+    padding: 15px;
     width: 50%;
     height: 50%;
     border-radius: 12px;
@@ -83,13 +84,14 @@
     height: auto;
     width: auto;
     text-align: center;
-    font-size: 16px;
+    font-size: 32px;
 }
 .contTwo-blockContTwo{
     display: flex;
     justify-content: center;
     align-items: center;
     height: auto;
+    min-height: 50%;
     width: 100%;
 }
 .contTwo-blockTwo{
@@ -108,9 +110,9 @@
     width: auto;
     max-width: 70%;
     text-align: center;
-    font-size: 16px;
-    padding: 40px;
-    border-radius: 12px;
+    font-size: 1.25rem;
+    padding: 80px;
+    border-radius: 8px;
     box-shadow: 6px 8px 8px rgb(143, 143, 143);
     background-color: rgb(206, 206, 206);
 }
@@ -137,10 +139,11 @@
     justify-content: center;
     align-items: center;
     margin-top: 75px;
-    padding: 10px;
-    height: 50%;
+    padding: 20px;
+    height: 70%;
     width: 70%;
-    border-radius: 10px;
+    font-size: 32px;
+    border-radius: 8px;
     background-color: rgb(225, 225, 225);
     box-shadow: 6px 8px 8px rgb(155, 155, 155);
 }
@@ -150,10 +153,8 @@
     grid-template-columns: 50% 50%;
     height: 500px;
     width: 100%;
-    margin-left: 5px;
     margin-top: 60px;
     margin-bottom: 20px;
-    margin-right: 5px;
 }
 .contTree-blockGridOne{
     display: flex;
@@ -168,7 +169,6 @@
     align-items: center;
     height: 80%;
     width: 90%;
-    background-color: rgb(172, 172, 172);
 }
 .contTree-blockGridTwo{
     display: flex;
@@ -183,7 +183,6 @@
     align-items: center;
     height: 80%;
     width: 90%;
-    background-color: rgb(172, 172, 172);
 }
 .contTree-blockGridTree{
     display: flex;
@@ -198,7 +197,6 @@
     align-items: center;
     height: 80%;
     width: 90%;
-    background-color: rgb(172, 172, 172);
 }
 .contTree-blockGridFoor{
     display: flex;
@@ -213,14 +211,21 @@
     align-items: center;
     height: 80%;
     width: 90%;
-    background-color: rgb(172, 172, 172);
+}
+.contTree-backImg{
+    background-image: url(./assets/imagesOne.jpg);
+    background-size: cover;
+}
+.contTree-blockGridText{
+    font-size: 2rem;
 }
 /* ----------------------CONTENEUR FOOR ------------------- */
 .conteneurFoor{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     width: 100vw;
     background-color: rgb(232, 232, 232);
 }
@@ -231,13 +236,14 @@
     align-items: center;
     height: 20%;
     width: 100%;
+    margin-top: 40px;
 }
 .contFoor-blockTitleOne{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50%;
+    height: 100%;
     width: 70%;
     border-radius: 8px;
     box-shadow: 6px 8px 8px rgb(158, 158, 158);
@@ -246,56 +252,98 @@
 .contFoor-titleOne{
     font-size: 32px;
 }
-.contFoor-conteneur{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    margin-top: 30px;
-}
 .contFoor-blockTwo{
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: row;
+    justify-content: space-around;
+    min-height: 100vh;
+    padding-bottom: 70px;
+    height: auto;
+    width: 100%;
+}
+.contFoor-contBlockOne{
+    display: flex;
+    flex-direction: column;
+    margin-top: 45px;
+    height: auto;
+    width: 40%;
+    background-color: rgb(165, 165, 165);
+}
+.contFoor-blockOneContOne{
+    display: flex;
+    height: 50%;
+    width: 100%;
+    background-color: yellow;
+}
+.contFoor-blockOneContTwo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+}
+.contFoor-blockTwoCont{
+    display: flex;
+    flex-direction: column;
+    margin-top: 45px;
+    height: auto;
+    width: 40%;
+    background-color: rgb(191, 191, 191);
+}
+.contFoor-blockTwoContOne{
+    display: flex;
+    height: 50%;
+    width: 100%;
+    background-color: yellow;
+}
+.contFoor-blockTwoContTwo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+}
+.contFoor-text{
+    display: flex;
     align-items: center;
     height: 90%;
-    width: 40%;
-    margin-left: 20px;
-    margin-right: 20px;
-    background-color: rgb(208, 208, 208);
+    width: 90%;
+    text-align: center;
+    font-size: 1.25rem;
 }
-.contFoor-blockOneGridOne{
+.contFoor-img{
     display: flex;
+    height: 100%;
+    width: 100%;
+}
+/* -----------------------CONTENEUR FIVE ------------------------ */
+.conteneurFive{
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 100vw;
+    background-color: aqua;
     align-items: center;
-    text-align: start;
-    height: 100%;
-    width: 100%;
 }
-.contFoor-blockOneGridTwo{
+.contFive-blockOne{
     display: flex;
-    height: 100%;
-    width: 100%;
-    background-color: blue;
-}
-.contFoor-blockTree{
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column-reverse;
-    height: 90%;
-    width: 40%;
-    margin-right: 20px;
-    background-color: rgb(196, 196, 196);
-}
-.contFoor-blockTwoGridOne{
-    display: flex;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 10%;
+    width: 70%;
+    justify-content: center;
     align-items: center;
-    text-align: start;
-    height: 100%;
-    width: 100%;
+    background-color: aliceblue;
+    box-shadow: 8px 12px 12px black;
 }
-.contFoor-blockTwoGridTwo{
+.contFive-blockOneTitle{
+    font-size: 1.5rem;
+}
+.contFive-blockOneGridOne{
     display: flex;
-    height: 100%;
-    width: 100%;
-    background-color: blue;
+    height: 80%;
+    width: 90%;
+    background-color: green;
+    margin-top: 40px;
+    margin-bottom: 100px;
 }
