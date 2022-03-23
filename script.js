@@ -9,17 +9,19 @@ const footer = document.getElementById("footer");
 const logoBarOne = document.getElementById("logoBarOne");
 const logoBarTwo = document.getElementById("logoBarTwo");
 const logoBarThree = document.getElementById("logoBarThree");
+const mainPage = document.getElementById("mainPage");
 const desktopNavButtons = [
 	document.getElementById("dekstopNavButtonOne"),
 	document.getElementById("dekstopNavButtonTwo"),
 	document.getElementById("dekstopNavButtonThree"),
 	document.getElementById("dekstopNavButtonFour"),
 ];
-
-let innerWidth = window.innerWidth;
+const cards = document.getElementsByClassName("activityCard");
+const cardTitles = document.getElementsByClassName("cardTitle");
+const cardRows = document.getElementsByClassName("cardRow");
+const servicesDesc = document.getElementsByClassName("serviceDesc");
 
 // DARK THEME
-
 function switchDarkTheme() {
 	themeButton.classList.toggle("sliderSwitch");
 	themeButton.classList.toggle("darkThemeButton");
@@ -29,10 +31,22 @@ function switchDarkTheme() {
 	headerDesktop.classList.toggle("dark");
 	navMenu.classList.toggle("darkNavMenu");
 	footer.classList.toggle("dark");
-
+  mainPage.classList.toggle("dark");
 	desktopNavButtons.forEach((item) => {
 		item.classList.toggle("desktopNavDark");
 	});
+  for (let i = 0; i < cards.length; i++) {
+    cards[i].classList.toggle("dark");
+  };
+  for (let i = 0; i < cardTitles.length; i++) {
+    cardTitles[i].classList.toggle("dark");
+  };
+  for (let i = 0; i < cardRows.length; i++) {
+    cardRows[i].classList.toggle("dark");
+  };
+  for (let i = 0; i < servicesDesc.length; i++) {
+    servicesDesc[i].classList.toggle("dark");
+  };
 }
 
 themeButton.addEventListener("click", (event) => {
@@ -57,17 +71,36 @@ if (localStorage.getItem("darkMode") == "enabled") {
 	switchDarkTheme();
 }
 
-// MAKES HEADER SCROLL WHEN ON MOBILE
+// // MAKES HEADER SCROLL WHEN ON MOBILE
+let innerWidth = window.innerWidth;
+if (this.window.innerWidth < 950) {
+	let lastScrollTop = 0;
+	document.addEventListener(
+		"scroll",
+		function () {
+			let st = window.pageYOffset || document.documentElement.scrollTop;
+			if (st > lastScrollTop && innerWidth < 950) {
+				header.style.top = "-65px";
+				menuInteract(true);
+			} else {
+				header.style.top = "0px";
+			}
+			lastScrollTop = st <= 0 ? 0 : st;
+		},
+		false
+	);
+};
+
 window.addEventListener("resize", function (event) {
 	innerWidth = this.window.innerWidth;
-	if (innerWidth < 900) {
+	if (innerWidth < 950) {
 		let lastScrollTop = 0;
 		document.addEventListener(
 			"scroll",
 			function () {
 				let st =
 					window.pageYOffset || document.documentElement.scrollTop;
-				if (st > lastScrollTop && innerWidth < 900) {
+				if (st > lastScrollTop && innerWidth < 950) {
 					header.style.top = "-65px";
 					menuInteract(true);
 				} else {
@@ -117,3 +150,12 @@ function menuInteract(fromScroll) {
 		isMenuOpen = false;
 	}
 }
+
+// CONTACT PAGE
+//Button Submit
+const message ="Thank you for your email, the team will answer you quickly";
+
+document.addEventListener("submit", function (event) {
+    event.preventDefault();
+    alert(message);
+})
