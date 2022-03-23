@@ -13,11 +13,39 @@
     min-width: 360px;
 } */
 /* -------------------MAIN---------------- */
-.main{
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    width: 100%;
+:root {
+	--mainColor: #f1f1f1;
+	--secondaryColor: #d8d8d8;
+	--accentColor: #bb002d;
+	--secondaryAccentColor: ;
+	--mainFontColor: #130004;
+	--secondaryFontColor: ;
+	--shadowColor: rgba(0, 0, 0, 0.25);
+
+	--darkMainColor: #202020;
+	--darkSecondaryColor: #464646;
+	--darkMainFontColor: #dbdbdb;
+}
+.main {
+  padding-bottom: 24px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.midPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sideAccent {
+  display: none;
 }
 /* -----------------CONTENEUR ONE ------------ */
 .conteneurOne{
@@ -40,11 +68,13 @@
     font-size: 4em;
     height: auto;
     width: auto;
+    color: var(--darkMainColor);
 }
 .contOne-titleTwo{
     font-size: 1.25em;
     height: auto;
     width: auto;
+    color: var(--darkMainColor);
 }
 /* -------------------------CONTENEUR TWO---------------------- */
 .conteneurTwo{
@@ -345,4 +375,25 @@
     background-color: green;
     margin-top: 40px;
     margin-bottom: 100px;
+}
+/* DESKTOP LAYOUT */
+@media screen and (min-width: 950px) {
+  .content {
+    align-items: center;
+  }
+  .midPage {
+    width: 70%;
+    max-width: 1000px;
+  }
+  .sideAccent {
+    display: flex;
+    width: 8%;
+    height: 1300px;
+  }
+  .left{
+    border-right: solid 4px var(--accentColor);
+  }
+  .right{
+    border-left: solid 4px var(--accentColor);
+  }
 }
