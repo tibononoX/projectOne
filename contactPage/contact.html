@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Activities</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;500&family=Montserrat:ital,wght@0,300;0,600;1,300&family=Oswald:wght@300&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./headerFooter.css">
-  <link rel="stylesheet" href="./activities.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokyo</title>
+    <link rel="stylesheet" href="../headerFooter.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
-
 <body class="body">
 
+    <!-- HEADER SECTION -->
   <!-- HEADER -->
   <header class="header" id="header">
 
@@ -26,25 +20,25 @@
       <nav class="navMenu" id="navMenu">
         <ul class="navList">
           <li class="navLink">
-            <a href="../index.html">
+            <a href="">
               <img src="https://via.placeholder.com/48x48.png" alt="">
               HOME
             </a>
           </li>
           <li class="navLink">
-            <a href="../activitiesPage/activities.html">
+            <a href="">
               <img src="https://via.placeholder.com/48x48.png" alt="">
               ACTIVITIES
             </a>
           </li>
           <li class="navLink">
-            <a href="../servicesPage/services.html">
+            <a href="">
               <img src="https://via.placeholder.com/48x48.png" alt="">
               SERVICES
             </a>
           </li>
           <li class="navLink">
-            <a href="../contactPage/contact.html">
+            <a href="">
               <img src="https://via.placeholder.com/48x48.png" alt="">
               CONTACT
             </a>
@@ -53,7 +47,7 @@
       </nav>
       <div class="headerAbove" id="headerAbove">
         <div class="headerLeft above">
-          <a href="../index.html" class="homeLink">
+          <a href="./index.html" class="homeLink">
             <img src="./assets/logo.png" alt="Logo">
           </a>
         </div>
@@ -79,12 +73,12 @@
       <div class="headerLeft">
         <ul class="menu">
           <li class="menuList" id="dekstopNavButtonOne">
-            <a href="../index.html">
+            <a href="">
               HOME
             </a>
           </li>
           <li class="menuList" id="dekstopNavButtonTwo">
-            <a href="../activitiesPage/activities.html">
+            <a href="">
               ACTIVITIES
             </a>
           </li>
@@ -92,7 +86,7 @@
       </div>
 
       <div class="headerMid">
-        <a href="../index.html" class="homeLink">
+        <a href="./index.html" class="homeLink">
           <img src="./assets/logo.png" alt="Logo">
         </a>
       </div>
@@ -100,12 +94,12 @@
       <div class="headerRight">
         <ul class="menu">
           <li class="menuList" id="dekstopNavButtonThree">
-            <a href="../servicesPage/services.html">
+            <a href="">
               SERVICES
             </a>
           </li>
           <li class="menuList" id="dekstopNavButtonFour">
-            <a href="../contactPage/contact.html">
+            <a href="">
               CONTACT
             </a>
           </li>
@@ -116,61 +110,45 @@
       <div class="themeButtonSlider"></div>
     </button>
   </header>
-
-  <!-- PAGE -->
-  <main class="main" id="mainPage">
-    <section class="pageTop">
-      <h2 class="pageTitle">ACTIVITIES</h2>
+    
+    <!-- CONTACT SECTION-->
+    <main class="main" id="mainPage">
+      <div class="content">
+        <div class="sideAccent left"></div>
+        <div class="midPage">
+  
+   <section class="contact">
+        <h1>Contact Form</h1>
+        <form action="/action_page.php">
+          <label for="fname">Name & First name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your First name and name">
+      
+          <label for="sujet">Topic</label>
+          <input type="text" id="sujet" name="sujet" placeholder="The subject of your message.">
+      
+          <label for="emailAddress">Email</label>
+          <input id="emailAddress" type="email" name="email" placeholder="Your email">
+      
+      
+          <label for="subject">Message</label>
+          <textarea id="subject" name="subject" placeholder="Your message" style="height:100px"></textarea>
+      
+          <input type="submit" value="Envoyer">
+        </form>
     </section>
-    <div class="content">
-      <div class="sideAccent left"></div>
-      <div class="midPage">
-        <section class="activityCard">
-          <div class="cardTitle">
-            <h3>Must-See Places</h3>
-          </div>
-          <div class="cardRow">
-            <img src="https://via.placeholder.com/80x80.png" alt="" class="cardImg">
-            <p class="cardText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, id.</p>
-          </div>
-          <div class="cardRow">
-            <p class="cardText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, id.</p>
-            <img src="https://via.placeholder.com/80x80.png" alt="" class="cardImg">
-          </div>
-          <div class="cardRow">
-            <img src="https://via.placeholder.com/80x80.png" https://via.placeholder.com/80x80.pngalt=""
-              class="cardImg">
-            <p class="cardText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, id.</p>
-          </div>
-        </section>
 
-        <section class="activityCard">
-          <div class="cardTitle">
-            <h3>Walk Tours</h3>
-          </div>
-          <div class="cardRow">
-            <img src="https://via.placeholder.com/80x80.png" alt="" class="cardImg">
-            <p class="cardText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, id.</p>
-          </div>
-          <div class="cardRow">
-            <p class="cardText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, id.</p>
-            <img src="https://via.placeholder.com/80x80.png" alt="" class="cardImg">
-          </div>
-          <div class="cardRow">
-            <img src="https://via.placeholder.com/80x80.png" alt="" class="cardImg">
-            <p class="cardText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, id.</p>
-          </div>
-        </section>
+        </div>
+        <div class="sideAccent right"></div>
       </div>
-      <div class="sideAccent right"></div>
-    </div>
-  </main>
-
+    </main>
+   
+ <!-- ABOUT US SECTION-->      
+  
   <!-- FOOTER -->
   <footer class="footer" id="footer">
     <div class="leftFooter">
       <div class="upperFooter">
-        <a href="../index.html" class="homeLink">
+        <a href="./index.html" class="homeLink">
           <img class="footerLogo" src="./assets/logo.png" alt="Logo">
         </a>
         <h3>ENJOY TOKYO!</h3>
@@ -195,7 +173,7 @@
           </a>
         </li>
         <li class="networkList">
-          <a href="https://www.tripadvisor.com/Tourism-g1023181-Tokyo_Prefecture_Kanto-Vacations.html" target="_blank">
+          <a href="https://www.tripadvisor.com/Tourism-g1023181-Tokyo_Prefecture_Kanto-Vacations.html"  target="_blank">
             <img src="./assets/tripadvisor.png" alt="Trip Advisor">
           </a>
         </li>
@@ -204,33 +182,32 @@
     <div class="rightFooter">
       <ul class="footerList" id="footerPageLinks">
         <li class="footerLinks">
-          <a href="../index.html" class="footerLinks">
+          <a href="" class="footerLinks">
             Homepage
           </a>
         </li>
         <li class="footerLinks">
-          <a href="../activitiesPage/activities.html" class="footerLinks">
+          <a href="" class="footerLinks">
             Activities
           </a>
         </li>
         <li class="footerLinks">
-          <a href="../servicesPage/services.html" class="footerLinks">
+          <a href="" class="footerLinks">
             Services
         </li>
         <li class="footerLinks">
-          <a href="../contactPage/contact.html" class="footerLinks">
+          <a href="" class="footerLinks">
             Contact
           </a>
         </li>
         <li class="footerLinks">
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="footerLinks">
+          <a href="" class="footerLinks">
             Legal Terms
           </a>
         </li>
       </ul>
     </div>
   </footer>
-  <script src="./script.js"></script>
+  <script src="../script.js"></script>
 </body>
-
 </html>
