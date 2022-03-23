@@ -19,6 +19,7 @@ const desktopNavButtons = [
 const cards = document.getElementsByClassName("activityCard");
 const cardTitles = document.getElementsByClassName("cardTitle");
 const cardRows = document.getElementsByClassName("cardRow");
+const servicesDesc = document.getElementsByClassName("serviceDesc");
 
 // DARK THEME
 function switchDarkTheme() {
@@ -42,6 +43,9 @@ function switchDarkTheme() {
   };
   for (let i = 0; i < cardRows.length; i++) {
     cardRows[i].classList.toggle("dark");
+  };
+  for (let i = 0; i < servicesDesc.length; i++) {
+    servicesDesc[i].classList.toggle("dark");
   };
 }
 
