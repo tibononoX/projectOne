@@ -28,25 +28,21 @@
         <ul class="navList">
           <li class="navLink">
             <a href="../index.html">
-              <img src="https://via.placeholder.com/48x48.png" alt="">
               HOME
             </a>
           </li>
           <li class="navLink">
             <a href="../activitiesPage/activities.html">
-              <img src="https://via.placeholder.com/48x48.png" alt="">
               ACTIVITIES
             </a>
           </li>
           <li class="navLink">
             <a href="../servicesPage/services.html">
-              <img src="https://via.placeholder.com/48x48.png" alt="">
               SERVICES
             </a>
           </li>
           <li class="navLink">
             <a href="../contactPage/contact.html">
-              <img src="https://via.placeholder.com/48x48.png" alt="">
               CONTACT
             </a>
           </li>
@@ -128,17 +124,17 @@
           <h1>Contact Form</h1>
           <form action="/action_page.php">
             <label for="fname">Name & First name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your First name and name">
+            <input class="inputForm" type="text" id="fname" name="firstname" placeholder="First name and last name" required>
 
             <label for="sujet">Topic</label>
-            <input type="text" id="sujet" name="sujet" placeholder="The subject of your message.">
+            <input class="inputForm" type="text" id="sujet" name="sujet" placeholder="The subject of your message" required>
 
             <label for="emailAddress">Email</label>
-            <input id="emailAddress" type="email" name="email" placeholder="Your email">
+            <input class="inputForm" id="emailAddress" type="email" name="email" placeholder="Email" required>
 
 
             <label for="subject">Message</label>
-            <textarea id="subject" name="subject" placeholder="Your message" style="height:100px"></textarea>
+            <textarea class="inputForm" id="subject" name="subject" placeholder="Type in your message ..." style="height:100px" required></textarea>
 
             <input type="submit" value="Envoyer">
           </form>
