@@ -75,6 +75,7 @@ if (localStorage.getItem("darkMode") == "enabled") {
 	switchDarkTheme();
 }
 
+
 // // MAKES HEADER SCROLL WHEN ON MOBILE
 let innerWidth = window.innerWidth;
 if (this.window.innerWidth < 950) {
