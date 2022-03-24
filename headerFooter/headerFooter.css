@@ -515,3 +515,8 @@ html {
 .cardRowDark {
   background-color: var(--darkSecondaryColor);
 }
+
+.darkForm {
+  background-color: #333333;
+  color: var(--darkMainFontColor);
+}

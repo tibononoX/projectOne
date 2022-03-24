@@ -20,6 +20,7 @@ const cards = document.getElementsByClassName("activityCard");
 const cardTitles = document.getElementsByClassName("cardTitle");
 const cardRows = document.getElementsByClassName("cardRow");
 const servicesDesc = document.getElementsByClassName("serviceDesc");
+const inputForm = document.getElementsByClassName("inputForm");
 
 // DARK THEME
 function switchDarkTheme() {
@@ -46,6 +47,9 @@ function switchDarkTheme() {
   };
   for (let i = 0; i < servicesDesc.length; i++) {
     servicesDesc[i].classList.toggle("dark");
+  };
+  for (let i = 0; i < inputForm.length; i++) {
+    inputForm[i].classList.toggle("darkForm");
   };
 }
 
