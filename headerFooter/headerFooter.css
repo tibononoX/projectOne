@@ -24,7 +24,7 @@ html {
 }
 
 .body {
-	min-width: 380px;
+	min-width: 370px;
 	max-width: 100vw;
 	height: auto;
 	display: flex;
@@ -39,7 +39,7 @@ html {
 /* CSS FOR HEADER AND FOOTER DO NOT TOUCH */
 /* MOBILE */
 .mobile {
-	min-width: 380px;
+	min-width: 370px;
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -48,7 +48,7 @@ html {
 .header {
 	position: fixed;
 	top: 0;
-	min-width: 360px;
+	min-width: 370px;
 	width: 100%;
 	height: 55px;
 	box-shadow: 0 4px 12px var(--shadowColor);
@@ -509,7 +509,7 @@ html {
   background-color: var(--darkSecondaryColor);
 }
 
-.dark .cardTitle, .dark .cardRow {
+.dark .cardTitle, .dark .cardRow, .dark .serviceDesc {
   background-color: var(--darkSecondaryColor);
 }
 
