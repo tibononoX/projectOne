@@ -17,9 +17,9 @@ const desktopNavButtons = [
 	document.getElementById("dekstopNavButtonFour"),
 ];
 const cards = document.getElementsByClassName("activityCard");
-const cardTitles = document.getElementsByClassName("cardTitle");
 const cardRows = document.getElementsByClassName("cardRow");
-const servicesDesc = document.getElementsByClassName("serviceDesc");
+const cardText = document.getElementsByClassName("cardText");
+const serviceDesc = document.getElementsByClassName("serviceDesc");
 const inputForm = document.getElementsByClassName("inputForm");
 
 // DARK THEME
@@ -39,14 +39,14 @@ function switchDarkTheme() {
   for (let i = 0; i < cards.length; i++) {
     cards[i].classList.toggle("dark");
   };
-  for (let i = 0; i < cardTitles.length; i++) {
-    cardTitles[i].classList.toggle("dark");
-  };
   for (let i = 0; i < cardRows.length; i++) {
-    cardRows[i].classList.toggle("dark");
+    cardRows[i].classList.toggle("darkText");
   };
-  for (let i = 0; i < servicesDesc.length; i++) {
-    servicesDesc[i].classList.toggle("dark");
+  for (let i = 0; i < cardText.length; i++) {
+    cardText[i].classList.toggle("darkText");
+  };
+  for (let i = 0; i < serviceDesc.length; i++) {
+    serviceDesc[i].classList.toggle("dark");
   };
   for (let i = 0; i < inputForm.length; i++) {
     inputForm[i].classList.toggle("darkForm");

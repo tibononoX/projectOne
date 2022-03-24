@@ -24,7 +24,7 @@ html {
 }
 
 .body {
-	min-width: 360px;
+	min-width: 380px;
 	max-width: 100vw;
 	height: auto;
 	display: flex;
@@ -33,6 +33,7 @@ html {
 	font-family: "Oswald", sans-serif;
 	font-family: "Hind Siliguri", sans-serif;
 	font-family: "Montserrat", sans-serif;
+  transition: 100ms;
 }
 
 /* CSS FOR HEADER AND FOOTER DO NOT TOUCH */
@@ -486,6 +487,10 @@ html {
   color: var(--mainColor);
 }
 
+.activityCard.dark .cardTitle {
+  background-color: var(--accentColor);
+}
+
 .darkThemeButton {
 	background-color: #686868;
 }
@@ -516,7 +521,19 @@ html {
   background-color: var(--darkSecondaryColor);
 }
 
-.darkForm {
-  background-color: #333333;
+.cardRowDark .cardText {
   color: var(--darkMainFontColor);
+}
+
+.darkText {
+  color: var(--darkMainFontColor);
+}
+
+.darkForm {
+  background-color: #727272;
+  color: var(--darkMainFontColor);
+}
+
+.darkForm::placeholder {
+  color: #adadad;
 }

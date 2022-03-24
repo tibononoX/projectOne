@@ -78,7 +78,7 @@ html {
 }
 
 .services {
-  width: 90%;
+  width: 95%;
   height: auto;
   background-color: var(--mainColor);
   margin: 22px 0 22px 0;
@@ -88,11 +88,16 @@ html {
   flex-direction: column;
   justify-content: space-between;
   transition: 100ms;
+  text-decoration: none;
 }
 
 .services:active {
   transform: scale(1.01);
   filter: brightness(102%);
+}
+
+.services:visited {
+  color: var(--mainFontColor);
 }
 
 .servicesTitle {
@@ -106,18 +111,18 @@ html {
   align-items: center;
 }
 
-.services p {
-  width: 100%;
-  height: 100px;
-  text-align: center;
-  padding: 12px;
-}
-
 .services img {
   width: 100%;
   height: auto;
   border-radius: 0 0 4px 4px;
   transition: 100ms;
+}
+
+.serviceDesc {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  padding: 12px;
 }
 
 /* DESKTOP LAYOUT */
@@ -153,13 +158,10 @@ html {
   .services:hover {
     transform: scale(1.01);
     filter: brightness(100%);
+    cursor: pointer;
   }
 
   .services img:active  {
     transform: scale(1.015);
-  }
-
-  .services:hover img, .services:hover .servicesTitle {
-    cursor: pointer;
   }
 }
