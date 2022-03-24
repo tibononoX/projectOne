@@ -495,7 +495,7 @@ html {
 	background-color: #686868;
 }
 
-.darkNavMenu {
+.darkNavMenu, .dark .contTree-backStyle, .dark .contTwo-backStyle, .dark .contFoor-backStyle {
 	background-color: var(--darkSecondaryColor);
 	color: var(--darkMainFontColor);
 }
