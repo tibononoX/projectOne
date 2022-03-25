@@ -22,6 +22,21 @@ const cardText = document.getElementsByClassName("cardText");
 const serviceDesc = document.getElementsByClassName("serviceDesc");
 const inputForm = document.getElementsByClassName("inputForm");
 
+// TYMOTHEE
+const background = [
+  document.getElementsByClassName("contTwo-backStyle"),
+  document.getElementsByClassName("contTree-backStyle"),
+  document.getElementsByClassName("contFoor-backStyle")
+]
+
+const backgroundTitle = [
+  document.getElementsByClassName("contTwo-title"),
+  document.getElementsByClassName("contTree-title"),
+  document.getElementsByClassName("contFoor-title")
+]
+
+const homePageMobileText = document.querySelectorAll(".contFoorRow p");
+
 // DARK THEME
 function switchDarkTheme() {
 	themeButton.classList.toggle("sliderSwitch");
@@ -51,6 +66,19 @@ function switchDarkTheme() {
   for (let i = 0; i < inputForm.length; i++) {
     inputForm[i].classList.toggle("darkForm");
   };
+  for (let i = 0; i < homePageMobileText.length; i++) {
+    homePageMobileText[i].classList.toggle("darkText");
+  };
+  background.forEach((item) => {
+    for (let i = 0; i < item.length; i++) {
+      item[i].classList.toggle("dark");
+    };
+	});
+  backgroundTitle.forEach((item) => {
+    for (let i = 0; i < item.length; i++) {
+      item[i].classList.toggle("dark");
+    };
+	});
 }
 
 themeButton.addEventListener("click", (event) => {
