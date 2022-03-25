@@ -17,25 +17,8 @@ const desktopNavButtons = [
 	document.getElementById("dekstopNavButtonFour"),
 ];
 const cards = document.getElementsByClassName("activityCard");
+const cardTitles = document.getElementsByClassName("cardTitle");
 const cardRows = document.getElementsByClassName("cardRow");
-const cardText = document.getElementsByClassName("cardText");
-const serviceDesc = document.getElementsByClassName("serviceDesc");
-const inputForm = document.getElementsByClassName("inputForm");
-
-// TYMOTHEE
-const background = [
-  document.getElementsByClassName("contTwo-backStyle"),
-  document.getElementsByClassName("contTree-backStyle"),
-  document.getElementsByClassName("contFoor-backStyle")
-]
-
-const backgroundTitle = [
-  document.getElementsByClassName("contTwo-title"),
-  document.getElementsByClassName("contTree-title"),
-  document.getElementsByClassName("contFoor-title")
-]
-
-const homePageMobileText = document.querySelectorAll(".contFoorRow p");
 
 // DARK THEME
 function switchDarkTheme() {
@@ -54,31 +37,12 @@ function switchDarkTheme() {
   for (let i = 0; i < cards.length; i++) {
     cards[i].classList.toggle("dark");
   };
+  for (let i = 0; i < cardTitles.length; i++) {
+    cardTitles[i].classList.toggle("dark");
+  };
   for (let i = 0; i < cardRows.length; i++) {
-    cardRows[i].classList.toggle("darkText");
+    cardRows[i].classList.toggle("dark");
   };
-  for (let i = 0; i < cardText.length; i++) {
-    cardText[i].classList.toggle("darkText");
-  };
-  for (let i = 0; i < serviceDesc.length; i++) {
-    serviceDesc[i].classList.toggle("dark");
-  };
-  for (let i = 0; i < inputForm.length; i++) {
-    inputForm[i].classList.toggle("darkForm");
-  };
-  for (let i = 0; i < homePageMobileText.length; i++) {
-    homePageMobileText[i].classList.toggle("darkText");
-  };
-  background.forEach((item) => {
-    for (let i = 0; i < item.length; i++) {
-      item[i].classList.toggle("dark");
-    };
-	});
-  backgroundTitle.forEach((item) => {
-    for (let i = 0; i < item.length; i++) {
-      item[i].classList.toggle("dark");
-    };
-	});
 }
 
 themeButton.addEventListener("click", (event) => {
@@ -102,7 +66,6 @@ themeButtonDesktop.addEventListener("click", (event) => {
 if (localStorage.getItem("darkMode") == "enabled") {
 	switchDarkTheme();
 }
-
 
 // // MAKES HEADER SCROLL WHEN ON MOBILE
 let innerWidth = window.innerWidth;
@@ -183,12 +146,3 @@ function menuInteract(fromScroll) {
 		isMenuOpen = false;
 	}
 }
-
-// CONTACT PAGE
-//Button Submit
-const message ="Thank you for your email, the team will answer you quickly";
-
-document.addEventListener("submit", function (event) {
-    event.preventDefault();
-    alert(message);
-})
