@@ -53,6 +53,7 @@ html {
 	height: 55px;
 	box-shadow: 0 4px 12px var(--shadowColor);
 	transition: top 200ms;
+  z-index: 10;
 }
 
 .headerAbove {
@@ -525,7 +526,7 @@ html {
   color: var(--darkMainFontColor);
 }
 
-.darkText {
+.darkText, .contFoorRow .darkText {
   color: var(--darkMainFontColor);
 }
 

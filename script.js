@@ -35,6 +35,8 @@ const backgroundTitle = [
   document.getElementsByClassName("contFoor-title")
 ]
 
+const homePageMobileText = document.querySelectorAll(".contFoorRow p");
+
 // DARK THEME
 function switchDarkTheme() {
 	themeButton.classList.toggle("sliderSwitch");
@@ -64,13 +66,14 @@ function switchDarkTheme() {
   for (let i = 0; i < inputForm.length; i++) {
     inputForm[i].classList.toggle("darkForm");
   };
-
+  for (let i = 0; i < homePageMobileText.length; i++) {
+    homePageMobileText[i].classList.toggle("darkText");
+  };
   background.forEach((item) => {
     for (let i = 0; i < item.length; i++) {
       item[i].classList.toggle("dark");
     };
 	});
-
   backgroundTitle.forEach((item) => {
     for (let i = 0; i < item.length; i++) {
       item[i].classList.toggle("dark");
