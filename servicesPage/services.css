@@ -1,26 +1,26 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	-webkit-tap-highlight-color: transparent;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 :root {
-	--mainColor: #f1f1f1;
-	--secondaryColor: #d8d8d8;
-	--accentColor: #bb002d;
-	--secondaryAccentColor: ;
-	--mainFontColor: #130004;
-	--secondaryFontColor: ;
-	--shadowColor: rgba(0, 0, 0, 0.25);
+  --mainColor: #f1f1f1;
+  --secondaryColor: #d8d8d8;
+  --accentColor: #bb002d;
+  --secondaryAccentColor: ;
+  --mainFontColor: #130004;
+  --secondaryFontColor: ;
+  --shadowColor: rgba(0, 0, 0, 0.25);
 
-	--darkMainColor: #202020;
-	--darkSecondaryColor: #464646;
-	--darkMainFontColor: #dbdbdb;
+  --darkMainColor: #202020;
+  --darkSecondaryColor: #464646;
+  --darkMainFontColor: #dbdbdb;
 }
 
 .main {
@@ -118,7 +118,6 @@ html {
 
 /* DESKTOP LAYOUT */
 @media screen and (min-width: 950px) {
-  
   .pageTop {
     height: 104px;
   }
@@ -138,11 +137,11 @@ html {
     height: 1500px;
   }
 
-  .left{
+  .left {
     border-right: solid 4px var(--accentColor);
   }
 
-  .right{
+  .right {
     border-left: solid 4px var(--accentColor);
   }
 
@@ -152,7 +151,7 @@ html {
     cursor: pointer;
   }
 
-  .services img:active  {
+  .services img:active {
     transform: scale(1.015);
   }
 }

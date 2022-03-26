@@ -1,233 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activities</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../headerFooter/assets/favicon.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;500&family=Montserrat:ital,wght@0,300;0,600;1,300&family=Oswald:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../headerFooter/headerFooter.css" />
+    <link rel="stylesheet" href="./activities.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Activities</title>
-  <link rel="icon" type="image/x-icon" href="../headerFooter/assets/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;500&family=Montserrat:ital,wght@0,300;0,600;1,300&family=Oswald:wght@300&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="../headerFooter/headerFooter.css">
-  <link rel="stylesheet" href="./activities.css">
-</head>
+  <body class="body">
+    <!-- HEADER -->
+    <header class="header" id="header">
+      <!-- MOBILE -->
+      <div class="mobile">
+        <!-- NAV MENU -->
+        <nav class="navMenu" id="navMenu">
+          <ul class="navList">
+            <li class="navLink">
+              <a href="../index.html"> HOME </a>
+            </li>
+            <li class="navLink">
+              <a href="../activitiesPage/activities.html"> ACTIVITIES </a>
+            </li>
+            <li class="navLink">
+              <a href="../servicesPage/services.html"> SERVICES </a>
+            </li>
+            <li class="navLink">
+              <a href="../contactPage/contact.html"> CONTACT </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="headerAbove" id="headerAbove">
+          <div class="headerLeft above">
+            <a href="../index.html" class="homeLink">
+              <img src="../headerFooter/assets/logo.png" alt="Logo" />
+            </a>
+          </div>
+          <div class="headerRight above">
+            <div class="headerRightLeft">
+              <button class="themeButton" id="themeButton">
+                <div class="themeButtonSlider"></div>
+              </button>
+            </div>
+            <div class="headerRightRight">
+              <button class="navButton" id="navButton">
+                <div class="menuLogoBars" id="logoBarOne"></div>
+                <div class="menuLogoBars" id="logoBarTwo"></div>
+                <div class="menuLogoBars" id="logoBarThree"></div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<body class="body">
+      <!-- DESKTOP -->
+      <div class="desktop" id="headerDesktop">
+        <div class="headerLeft">
+          <ul class="menu">
+            <li class="menuList" id="dekstopNavButtonOne">
+              <a href="../index.html"> HOME </a>
+            </li>
+            <li class="menuList" id="dekstopNavButtonTwo">
+              <a href="../activitiesPage/activities.html"> ACTIVITIES </a>
+            </li>
+          </ul>
+        </div>
 
-  <!-- HEADER -->
-  <header class="header" id="header">
+        <div class="headerMid">
+          <a href="./index.html" class="homeLink">
+            <img src="../headerFooter/assets/logo.png" alt="Logo" />
+          </a>
+        </div>
 
-    <!-- MOBILE -->
-    <div class="mobile">
-      <!-- NAV MENU -->
-      <nav class="navMenu" id="navMenu">
-        <ul class="navList">
-          <li class="navLink">
-            <a href="../index.html">
-              HOME
+        <div class="headerRight">
+          <ul class="menu">
+            <li class="menuList" id="dekstopNavButtonThree">
+              <a href="../servicesPage/services.html"> SERVICES </a>
+            </li>
+            <li class="menuList" id="dekstopNavButtonFour">
+              <a href="../contactPage/contact.html"> CONTACT </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button class="themeButton" id="themeButtonDesktop">
+        <div class="themeButtonSlider"></div>
+      </button>
+    </header>
+
+    <!-- PAGE -->
+    <main class="main" id="mainPage">
+      <section class="pageTop">
+        <h2 class="pageTitle">ACTIVITIES</h2>
+      </section>
+      <div class="content">
+        <div class="sideAccent left"></div>
+        <div class="midPage">
+          <section class="activityCard">
+            <div class="cardTitle">
+              <h3>Must-See Places</h3>
+            </div>
+            <a
+              href="https://goo.gl/maps/GUwg4vLKUB2wGmx28"
+              class="cardRow"
+              target="_blank"
+            >
+              <img
+                src="./assets/nezuShrine.jpg"
+                alt="Nezu Schrine"
+                class="cardImg borderLeft"
+              />
+              <p class="cardText">
+                <b>Nezu Shrine</b> in Tokyo's Bunkyo ward is one of Japan's
+                oldest shrines. Set in lush greenery, it reflects Japanese
+                culture in all its age and beauty.
+              </p>
             </a>
-          </li>
-          <li class="navLink">
-            <a href="../activitiesPage/activities.html">
-              ACTIVITIES
+            <a
+              href="https://goo.gl/maps/4RrVx8UpiHDRq7ve9"
+              class="cardRow"
+              target="_blank"
+            >
+              <p class="cardText">
+                <b>Inokashira Park</b> is loved among locals for providing a
+                luscious green space, with plenty of recreational facilities, a
+                shrine, and a bucolic pond.
+              </p>
+              <img
+                src="./assets/inokashiraPark.jpg"
+                alt="Inokashira Park"
+                class="cardImg borderRight"
+              />
             </a>
-          </li>
-          <li class="navLink">
-            <a href="../servicesPage/services.html">
-              SERVICES
+            <a
+              href="https://goo.gl/maps/DrPgGZTaZWaDkvz7A"
+              class="cardRow"
+              target="_blank"
+            >
+              <img
+                src="./assets/tsukijiHonganjiTemple.jpg"
+                alt="Tsukiji Honganji Temple"
+                class="cardImg borderLeft"
+              />
+              <p class="cardText">
+                <b>Tsukiji Hongwanji Temple</b> is another jewel in Tokyo's
+                cityscape. This Buddhist temple is unlike any other, especially
+                in terms of its architecture.
+              </p>
             </a>
-          </li>
-          <li class="navLink">
-            <a href="../contactPage/contact.html">
-              CONTACT
+          </section>
+
+          <section class="activityCard">
+            <div class="cardTitle">
+              <h3>Walk Tours</h3>
+            </div>
+            <a
+              href="https://tokyowalkingtours.com/index.php?main_page=product_info&cPath=1&products_id=28"
+              class="cardRow"
+              target="_blank"
+            >
+              <img
+                src="./assets/greatBuddha.jpg"
+                alt="Great Buddha in Kamakura"
+                class="cardImg borderLeft"
+              />
+              <p class="cardText">
+                <b>Kamakura</b> has many illustrious temples, shrines, gardens,
+                and historic monuments. An ancient political capital that seated
+                the first samurai government of Japan!
+              </p>
             </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="headerAbove" id="headerAbove">
-        <div class="headerLeft above">
+            <a
+              href="https://tokyowalkingtours.com/index.php?main_page=product_info&cPath=1&products_id=53"
+              class="cardRow"
+              target="_blank"
+            >
+              <p class="cardText">
+                <b>Kyoto</b> is considered the cultural capital of Japan and a
+                major tourist destination. It is home to numerous Buddhist
+                temples, Shinto shrines, palaces and gardens!
+              </p>
+              <img
+                src="./assets/kyoto.jpg"
+                alt="Kyoto tour"
+                class="cardImg borderRight"
+              />
+            </a>
+            <a
+              href="https://tokyowalkingtours.com/index.php?main_page=product_info&cPath=1&products_id=52"
+              class="cardRow"
+              target="_blank"
+            >
+              <img
+                src="./assets/hiddenLocalSites.jpg"
+                alt="Hidden and Local sites"
+                class="cardImg borderLeft"
+              />
+              <p class="cardText">
+                <b>Hidden and local sites</b> in Tokyo are perfect if you've
+                already discovered the most touristic areas. Hop in 8 hours of
+                discovering secrets of Tokyo!
+              </p>
+            </a>
+          </section>
+        </div>
+        <div class="sideAccent right"></div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+      <div class="leftFooter">
+        <div class="upperFooter">
           <a href="../index.html" class="homeLink">
-            <img src="../headerFooter/assets/logo.png" alt="Logo">
+            <img
+              class="footerLogo"
+              src="../headerFooter/assets/logo.png"
+              alt="Logo"
+            />
           </a>
-        </div>
-        <div class="headerRight above">
-          <div class="headerRightLeft">
-            <button class="themeButton" id="themeButton">
-              <div class="themeButtonSlider"></div>
-            </button>
-          </div>
-          <div class="headerRightRight">
-            <button class="navButton" id="navButton">
-              <div class="menuLogoBars" id="logoBarOne"></div>
-              <div class="menuLogoBars" id="logoBarTwo"></div>
-              <div class="menuLogoBars" id="logoBarThree"></div>
-            </button>
-          </div>
+          <h3>ENJOY TOKYO!</h3>
+          <p class="copyrights">&copy; Tokyo Gang</p>
         </div>
       </div>
-    </div>
-
-    <!-- DESKTOP -->
-    <div class="desktop" id="headerDesktop">
-      <div class="headerLeft">
-        <ul class="menu">
-          <li class="menuList" id="dekstopNavButtonOne">
-            <a href="../index.html">
-              HOME
+      <div class="midFooter">
+        <ul class="networks">
+          <li class="networkList">
+            <a href="https://www.facebook.com/GoTokyo.fr/" target="_blank">
+              <img src="../headerFooter/assets/facebook.png" alt="Facebook" />
             </a>
           </li>
-          <li class="menuList" id="dekstopNavButtonTwo">
-            <a href="../activitiesPage/activities.html">
-              ACTIVITIES
+          <li class="networkList">
+            <a
+              href="https://www.instagram.com/tokyotokyooldmeetsnew/"
+              target="_blank"
+            >
+              <img src="../headerFooter/assets/instagram.png" alt="Instagram" />
+            </a>
+          </li>
+          <li class="networkList">
+            <a href="https://twitter.com/GOTOKYOofficial" target="_blank">
+              <img src="../headerFooter/assets/twitter.png" alt="Twitter" />
+            </a>
+          </li>
+          <li class="networkList">
+            <a
+              href="https://www.tripadvisor.com/Tourism-g1023181-Tokyo_Prefecture_Kanto-Vacations.html"
+              target="_blank"
+            >
+              <img
+                src="../headerFooter/assets/tripadvisor.png"
+                alt="Trip Advisor"
+              />
             </a>
           </li>
         </ul>
       </div>
-
-      <div class="headerMid">
-        <a href="./index.html" class="homeLink">
-          <img src="../headerFooter/assets/logo.png" alt="Logo">
-        </a>
-      </div>
-
-      <div class="headerRight">
-        <ul class="menu">
-          <li class="menuList" id="dekstopNavButtonThree">
-            <a href="../servicesPage/services.html">
-              SERVICES
+      <div class="rightFooter">
+        <ul class="footerList" id="footerPageLinks">
+          <li class="footerLinks">
+            <a href="../index.html" class="footerLinks"> Homepage </a>
+          </li>
+          <li class="footerLinks">
+            <a href="../activitiesPage/activities.html" class="footerLinks">
+              Activities
             </a>
           </li>
-          <li class="menuList" id="dekstopNavButtonFour">
-            <a href="../contactPage/contact.html">
-              CONTACT
+          <li class="footerLinks">
+            <a href="../servicesPage/services.html" class="footerLinks">
+              Services
+            </a>
+          </li>
+          <li class="footerLinks">
+            <a href="../contactPage/contact.html" class="footerLinks">
+              Contact
+            </a>
+          </li>
+          <li class="footerLinks">
+            <a
+              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              class="footerLinks"
+            >
+              Legal Terms
             </a>
           </li>
         </ul>
       </div>
-    </div>
-    <button class="themeButton" id="themeButtonDesktop">
-      <div class="themeButtonSlider"></div>
-    </button>
-  </header>
-
-  <!-- PAGE -->
-  <main class="main" id="mainPage">
-    <section class="pageTop">
-      <h2 class="pageTitle">ACTIVITIES</h2>
-    </section>
-    <div class="content">
-      <div class="sideAccent left"></div>
-      <div class="midPage">
-        <section class="activityCard">
-          <div class="cardTitle">
-            <h3>Must-See Places</h3>
-          </div>
-          <a href="https://goo.gl/maps/GUwg4vLKUB2wGmx28" class="cardRow" target="_blank">
-            <img src="./assets/nezuShrine.jpg" alt="Nezu Schrine" class="cardImg borderLeft">
-            <p class="cardText"><b>Nezu Shrine</b> in Tokyo's Bunkyo ward is one of Japan's oldest shrines. Set in lush greenery, it reflects Japanese culture in all its age and beauty.
-            </p>
-          </a>
-          <a href="https://goo.gl/maps/4RrVx8UpiHDRq7ve9" class="cardRow" target="_blank">
-            <p class="cardText"><b>Inokashira Park</b> is loved among locals for providing a luscious green space, with plenty of recreational facilities, a shrine, and a bucolic pond.</p>
-            <img src="./assets/inokashiraPark.jpg" alt="Inokashira Park" class="cardImg borderRight">
-          </a>
-          <a href="https://goo.gl/maps/DrPgGZTaZWaDkvz7A" class="cardRow" target="_blank">
-            <img src="./assets/tsukijiHonganjiTemple.jpg" alt="Tsukiji Honganji Temple" class="cardImg borderLeft">
-            <p class="cardText"><b>Tsukiji Hongwanji Temple</b> is another jewel in Tokyo's cityscape. This Buddhist temple is unlike any other, especially in terms of its architecture.</p>
-          </a>
-        </section>
-
-        <section class="activityCard">
-          <div class="cardTitle">
-            <h3>Walk Tours</h3>
-          </div>
-          <a href="https://tokyowalkingtours.com/index.php?main_page=product_info&cPath=1&products_id=28" class="cardRow" target="_blank">
-            <img src="./assets/greatBuddha.jpg" alt="Great Buddha in Kamakura" class="cardImg borderLeft">
-            <p class="cardText"><b>Kamakura</b> has many illustrious temples, shrines, gardens, and historic monuments. An ancient political capital that seated the first samurai government of Japan!</p>
-          </a>
-          <a href="https://tokyowalkingtours.com/index.php?main_page=product_info&cPath=1&products_id=53" class="cardRow" target="_blank">
-            <p class="cardText"><b>Kyoto</b> is considered the cultural capital of Japan and a major tourist destination. It is home to numerous Buddhist temples, Shinto shrines, palaces and gardens!</p>
-            <img src="./assets/kyoto.jpg" alt="Kyoto tour" class="cardImg borderRight">
-          </a>
-          <a href="https://tokyowalkingtours.com/index.php?main_page=product_info&cPath=1&products_id=52" class="cardRow" target="_blank">
-            <img src="./assets/hiddenLocalSites.jpg" alt="Hidden and Local sites" class="cardImg borderLeft">
-            <p class="cardText"><b>Hidden and local sites</b> in Tokyo are perfect if you've already discovered the most touristic areas. Hop in 8 hours of discovering secrets of Tokyo!</p>
-          </a>
-        </section>
-      </div>
-      <div class="sideAccent right"></div>
-    </div>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer" id="footer">
-    <div class="leftFooter">
-      <div class="upperFooter">
-        <a href="../index.html" class="homeLink">
-          <img class="footerLogo" src="../headerFooter/assets/logo.png" alt="Logo">
-        </a>
-        <h3>ENJOY TOKYO!</h3>
-        <p class="copyrights">&copy; Tokyo Gang</p>
-      </div>
-    </div>
-    <div class="midFooter">
-      <ul class="networks">
-        <li class="networkList">
-          <a href="https://www.facebook.com/GoTokyo.fr/" target="_blank">
-            <img src="../headerFooter/assets/facebook.png" alt="Facebook">
-          </a>
-        </li>
-        <li class="networkList">
-          <a href="https://www.instagram.com/tokyotokyooldmeetsnew/" target="_blank">
-            <img src="../headerFooter/assets/instagram.png" alt="Instagram">
-          </a>
-        </li>
-        <li class="networkList">
-          <a href="https://twitter.com/GOTOKYOofficial" target="_blank">
-            <img src="../headerFooter/assets/twitter.png" alt="Twitter">
-          </a>
-        </li>
-        <li class="networkList">
-          <a href="https://www.tripadvisor.com/Tourism-g1023181-Tokyo_Prefecture_Kanto-Vacations.html" target="_blank">
-            <img src="../headerFooter/assets/tripadvisor.png" alt="Trip Advisor">
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="rightFooter">
-      <ul class="footerList" id="footerPageLinks">
-        <li class="footerLinks">
-          <a href="../index.html" class="footerLinks">
-            Homepage
-          </a>
-        </li>
-        <li class="footerLinks">
-          <a href="../activitiesPage/activities.html" class="footerLinks">
-            Activities
-          </a>
-        </li>
-        <li class="footerLinks">
-          <a href="../servicesPage/services.html" class="footerLinks">
-            Services
-        </li>
-        <li class="footerLinks">
-          <a href="../contactPage/contact.html" class="footerLinks">
-            Contact
-          </a>
-        </li>
-        <li class="footerLinks">
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="footerLinks">
-            Legal Terms
-          </a>
-        </li>
-      </ul>
-    </div>
-  </footer>
-  <script src="../script.js"></script>
-</body>
-
+    </footer>
+    <script src="../script.js"></script>
+  </body>
 </html>
